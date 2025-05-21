@@ -102,29 +102,29 @@ int main(){
 
     //comparação das cartas
     printf("***COMPARAÇÃO DAS CARTAS, QUEM GANHOU?**\n");
-    printf("População: Carta 1 venceu? (%d)\n", &populacao1 > &populacao2);
-    printf("População: Carta 2 venceu? (%d)\n", &populacao2 > &populacao1);
-    printf("População: Deu empate? (%d)\n", &populacao1 == &populacao2);
+    printf("População: Carta 1 venceu? (%d)\n", populacao1 > populacao2);
+    printf("População: Carta 2 venceu? (%d)\n", populacao2 > populacao1);
+    printf("População: Deu empate? (%d)\n", populacao1 == populacao2);
 
-    printf("Area: Carta 1 venceu? (%d)\n", &area1 > &area2);
-    printf("Area: Carta 2 venceu? (%d)\n", &area2 > &area1);
-    printf("Area: Deu empate? (%d)\n", &area1 == &area2);
+    printf("Area: Carta 1 venceu? (%d)\n", area1 > area2);
+    printf("Area: Carta 2 venceu? (%d)\n", area2 > area1);
+    printf("Area: Deu empate? (%d)\n", area1 == area2);
 
-    printf("PIB: Carta 1 venceu? (%d)\n", &pib1 > &pib2);
-    printf("PIB: Carta 2 venceu? (%d)\n", &pib2 > &pib1);
-    printf("PIB: Deu empate? (%d)\n", &pib1 == &pib2);
+    printf("PIB: Carta 1 venceu? (%d)\n", pib1 > pib2);
+    printf("PIB: Carta 2 venceu? (%d)\n", pib2 > pib1);
+    printf("PIB: Deu empate? (%d)\n", pib1 == pib2);
 
-    printf("Pontos Turisticos: Carta 1 venceu? (%d)\n", &numeropontos1 > &numeropontos2);
-    printf("Pontos Turisticos: Carta 2 venceu? (%d)\n", &numeropontos2 > &numeropontos1);
-    printf("Pontos Turisticos: Deu empate? (%d)\n", &numeropontos1 == &numeropontos2);
+    printf("Pontos Turisticos: Carta 1 venceu? (%d)\n", numeropontos1 > numeropontos2);
+    printf("Pontos Turisticos: Carta 2 venceu? (%d)\n", numeropontos2 > numeropontos1);
+    printf("Pontos Turisticos: Deu empate? (%d)\n", numeropontos1 == numeropontos2);
 
-    printf("Densidade Populacional: Carta 1 venceu? (%d)\n", &densidade1 < &densidade2);
-    printf("Densidade Populacional: Carta 2 venceu? (%d)\n", &densidade2 < &densidade1);
-    printf("Densidade Populacional: Deu empate? (%d)\n", &densidade1 == &densidade2);
+    printf("Densidade Populacional: Carta 1 venceu? (%d)\n", densidade1 < densidade2);
+    printf("Densidade Populacional: Carta 2 venceu? (%d)\n", densidade2 < densidade1);
+    printf("Densidade Populacional: Deu empate? (%d)\n", densidade1 == densidade2);
 
-    printf("PIB PER CAPITA: Carta 1 venceu? (%d)\n", &ppc1 > &ppc2);
-    printf("PIB PER CAPITA: Carta 2 venceu? (%d)\n", &ppc2 > &ppc1);
-    printf("PIB PER CAPITA: Deu empate? (%d)\n", &pib1 == &pib2);
+    printf("PIB PER CAPITA: Carta 1 venceu? (%d)\n", ppc1 > ppc2);
+    printf("PIB PER CAPITA: Carta 2 venceu? (%d)\n", ppc2 > ppc1);
+    printf("PIB PER CAPITA: Deu empate? (%d)\n", pib1 == pib2);
 
     
 
@@ -140,8 +140,38 @@ int main(){
     printf("AS DUAS CARTAS TEM O MESMO PODER? %d\n", superPoder1 == superPoder2);
 
 
+    //Adicionando a comparação DE POPULAÇÃO
 
+    printf("\nComparação de cartas (Atributo: População):\n");
+    printf("Carta 1: %s (%s) - %lu habitantes\n", cidade1, estado1, populacao1);
+    printf("Carta 2: %s (%s) - %lu habitantes\n", cidade2, estado2, populacao2);
 
+        if(populacao1 > populacao2){
+            printf("A carta 1 (%s) venceu no quesito população.\n", cidade1);
+        }else if (populacao2 > populacao1)
+        {
+            printf("A carta 2(%s) venceu no quesito população.\n", cidade2);
+        }else
+        {
+            printf("Resultado EMPATE");
+        }
+        
+         //Adicionando a comparação SUPER PODER
+
+    printf("\nComparação de cartas (Atributo MAIS FORTE: SUPER PODER):\n");
+    printf("Carta 1: %s (%s) - %f DE PODER\n", cidade1, estado1, superPoder1);
+    printf("Carta 2: %s (%s) - %f DE PODER\n", cidade2, estado2, superPoder2);
+
+        if(superPoder1 > superPoder2){
+            printf("A carta 1 (%s) venceu no quesito PODER.\n", cidade1);
+        }else if (superPoder2 > superPoder1)
+        {
+            printf("A carta 2(%s) venceu no quesito PODER.\n", cidade2);
+        }else
+        {
+            printf("Resultado EMPATE");
+        }
+        
 
 
 
